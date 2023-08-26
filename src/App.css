@@ -29,15 +29,14 @@
   border-bottom: 1px solid lightgray; /* If you want dots under the hoverable text */
 }
 .tooltip .tooltipText{
-  max-height: 20px;
   min-width: 160px;
+  /* width: fit-content; */
   background-color: rgb(138, 136, 136); 
   color: #fff;
   text-align: center;
   padding: 3px 0;
   border-radius: 3px; 
-  pointer-events: none;
- 
+
   /* Position the tooltip text - see examples below! */ 
   position: absolute;  
   z-index: 1;
@@ -89,7 +88,12 @@
 }
 .tooltip-top{
   bottom: 60px;
-  right: 130px;
+  left: -125px;
+  white-space:nowrap;
+  right: unset;
+}
+.tooltip-top .tooltipText{
+  height: 20px;
 }
 .tooltip-top:after{
   top: 25px;

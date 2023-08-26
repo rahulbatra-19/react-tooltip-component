@@ -3,7 +3,7 @@ import "../App.css";
 import Tooltip from "./Tooltip";
 
 function App() {
-  const [hovering, setHovering] = useState(false);
+  const [hovering, setHovering] = useState(true);
   return (
     <div className="App">
       <button
@@ -13,7 +13,9 @@ function App() {
       >
         Sign up
       </button>
-      {hovering && <Tooltip position={"bottom"} content={`Press `} />}
+      {hovering && (
+        <Tooltip position={"top"} content={"this is best way to be in the rome and it is good "} />
+      )}
     </div>
   );
 }

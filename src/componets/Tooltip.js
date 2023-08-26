@@ -1,9 +1,7 @@
 const Tooltip = ({ position, content }) => {
   return (
-    <div className={`tooltip-${position}  tooltip`}>
-      <span className="tooltipText">
-        {content}
-      </span>
+    <div className={` tooltip  tooltip-${position} `}>
+      <span className="tooltipText">{content}</span>
     </div>
   );
 };
