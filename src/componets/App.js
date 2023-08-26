@@ -11,17 +11,9 @@ function App() {
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
       >
-        Press
+        Sign up
       </button>
-      {hovering && (
-        <Tooltip
-          top={10}
-          bottom={20}
-          right={10}
-          left={20}
-          content={`Thanks for hovering im a tooltip`}
-        />
-      )}
+      {hovering && <Tooltip position={"bottom"} content={`Press `} />}
     </div>
   );
 }

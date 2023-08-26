@@ -13,7 +13,9 @@
   }
 }
 
-.button {
+.button { 
+  width: 100px;
+  height: 40px;
   color: white;
   background-color: green;
   border: none;
@@ -22,7 +24,82 @@
   font-size: 1rem;
 }
 .tooltip{
-  background-color: lightgray;
-  width: fit-content;
-  padding: 5px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid lightgray; /* If you want dots under the hoverable text */
 }
+.tooltip .tooltipText{
+  max-height: 20px;
+  min-width: 160px;
+  background-color: rgb(138, 136, 136); 
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 3px; 
+  pointer-events: none;
+ 
+  /* Position the tooltip text - see examples below! */ 
+  position: absolute;  
+  z-index: 1;
+}
+
+.tooltip-right{
+  left: 10px;
+  bottom: 20px;
+}
+.tooltip-right:before{
+  top: 5px;
+  content: " ";
+  display: block;
+  right: 0px;
+  position: absolute;
+  border-color:  transparent  rgb(138, 136, 136)   transparent    transparent;
+  border-style: solid;
+  border-width: 8px;
+ } 
+
+.tooltip-left{
+  right: 270px;
+  bottom: 20px;
+}
+.tooltip-left:after{
+  top: 5px;
+  content: " ";
+  display: block;
+  left: 160px;
+
+  position: absolute;
+  border-color:  transparent transparent    transparent  rgb(138, 136, 136)   ;
+  border-style: solid;
+  border-width: 8px;
+ } 
+.tooltip-bottom{
+  top: 25px;
+  right: 130px;
+}
+.tooltip-bottom::after{
+  bottom: 0px;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 70px;
+  border-color:  transparent    transparent rgb(138, 136, 136)   transparent ;
+  border-style: solid;
+  border-width: 8px;
+}
+.tooltip-top{
+  bottom: 60px;
+  right: 130px;
+}
+.tooltip-top:after{
+  top: 25px;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 70px;
+  border-color: rgb(138, 136, 136) transparent    transparent    transparent  ;
+  border-style: solid;
+  border-width: 8px;
+ } 
+
+

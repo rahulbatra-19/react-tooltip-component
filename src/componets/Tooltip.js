@@ -1,10 +1,9 @@
-const Tooltip = ({ top, botttom, left, right, content }) => {
+const Tooltip = ({ position, content }) => {
   return (
-    <div
-      style={{ top: top, bottom: botttom, left: left, right: right }}
-      className="tooltip"
-    >
-      {content}
+    <div className={`tooltip-${position}  tooltip`}>
+      <span className="tooltipText">
+        {content}
+      </span>
     </div>
   );
 };
