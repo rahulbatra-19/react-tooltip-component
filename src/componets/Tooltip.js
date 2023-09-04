@@ -1,3 +1,4 @@
+// this is the tooltip component
 const Tooltip = ({ position, content }) => {
   return (
     <div className={` tooltip  tooltip-${position} `}>
